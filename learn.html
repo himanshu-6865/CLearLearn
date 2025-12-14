@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CLearLearn | Learn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h2>CLearLearn</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="learn.html">Learn</a></li>
+    <li><a href="analytics.html">Analytics</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><button class="theme-btn" onclick="toggleTheme()">🌙</button></li>
+  </ul>
+</nav>
+
+<section class="container learn-bg">
+  <div class="learn-layout">
+
+    <div class="card learn-card">
+      <h2>Learning Input</h2>
+
+      <textarea
+        id="contentInput"
+        class="large-textarea"
+        placeholder="Paste your learning content here...">
+      </textarea>
+
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <button class="btn-accent full-width" onclick="startLearning()">
+        Start Focus Mode
+      </button>
+    </div>
+
+    <div class="card focus-card hidden" id="learningSection">
+      <h2>Focus Content</h2>
+
+      <div class="content-box" id="contentBox"></div>
+
+      <div class="nav-buttons">
+        <button class="btn-primary" onclick="prevChunk()">Previous</button>
+        <button class="btn-primary" onclick="nextChunk()">Next</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
